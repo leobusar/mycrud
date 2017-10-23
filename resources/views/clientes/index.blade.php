@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+@role('admin')
+    <p>This is visible to users with the admin role. Gets translated to 
+    \Entrust::role('admin')</p>
+@endrole
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -35,7 +40,12 @@
 		                		<td>{{$cliente->fecha}}</td>
 		                		<td>{{$cliente->telefono}}</td>
 		                		<td><a href="{{route('clientes.show',$cliente->id)}}" class="btn btn-primary pull-right"> Ver</a></td>
-		                		<td><a href="{{route('clientes.edit',$cliente->id)}}" class="btn btn-primary pull-right"> Editar</a></td>
+		                		<td>
+                                    @permission('edit-clientes')
+                                    <a href="{{route('clientes.edit',$cliente->id)}}" class="btn btn-primary pull-right"> Editar</a>
+                                    @endpermission
+
+                                </td>
 		                		<td> 
 		                			{!! Form::model($cliente, ['route' => ['clientes.destroy', $cliente->id], 'method' => 'DELETE']) !!}
 		                			{!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!} 

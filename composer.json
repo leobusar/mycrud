@@ -6,9 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "acacha/admin-lte-template-laravel": "4.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.4.0"
+        "laravelcollective/html": "^5.4.0",
+        "acoustep/entrust-gui": "5.2.x-dev",
+        "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -20,7 +23,7 @@
             "database"
         ],
         "psr-4": {
-            "MyFirstApp\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

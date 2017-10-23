@@ -1,8 +1,8 @@
 <?php
 
-namespace MyFirstApp\Http\Controllers;
+namespace App\Http\Controllers;
 
-use MyFirstApp\Cliente;
+use App\Cliente;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -52,7 +52,7 @@ class ClienteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \MyFirstApp\Cliente  $cliente
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
     public function show(Cliente $cliente)
@@ -64,7 +64,7 @@ class ClienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \MyFirstApp\Cliente  $cliente
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
     public function edit(Cliente $cliente)
@@ -76,7 +76,7 @@ class ClienteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \MyFirstApp\Cliente  $cliente
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Cliente $cliente)
@@ -87,7 +87,7 @@ class ClienteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \MyFirstApp\Cliente  $cliente
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
     public function destroy(Cliente $cliente)

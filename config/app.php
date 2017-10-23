@@ -173,11 +173,13 @@ return [
         /*
          * Application Service Providers...
          */
-        MyFirstApp\Providers\AppServiceProvider::class,
-        MyFirstApp\Providers\AuthServiceProvider::class,
-        // MyFirstApp\Providers\BroadcastServiceProvider::class,
-        MyFirstApp\Providers\EventServiceProvider::class,
-        MyFirstApp\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+        Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        Acoustep\EntrustGui\EntrustGuiServiceProvider::class,
 
     ],
 
@@ -229,6 +231,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
 
     ],
 
